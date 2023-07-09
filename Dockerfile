@@ -1,9 +1,9 @@
 FROM python:3.10.0
 
-WORKDIR /app
-
 COPY . /app
+
+WORKDIR /app
 
 EXPOSE 80
 
-RUN python3 main.py
+CMD ["python3", "main.py"]
