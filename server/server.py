@@ -26,10 +26,10 @@ def load_page_from_get(request_data):
         return headers_404.format(content_type).encode('utf-8')
 
 
-def start_server():
+def start_server(ip):
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server.bind(('localhost', 80))
+        server.bind((ip, 80))
         server.listen(4)
         print("server started")
         while True:
@@ -39,7 +39,3 @@ def start_server():
             client_socket.shutdown(socket.SHUT_WR)
     except KeyboardInterrupt:
         print("server stopped")
-
-
-if __name__ == '__main__':
-    start_server()
