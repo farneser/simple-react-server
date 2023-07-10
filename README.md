@@ -5,5 +5,14 @@
 You neet to copy your *dist* folder in a root of project and run 
 
 ```bash
-python3 main.py
+python3 app.py
+```
+
+Or run with docker
+```bash
+docker-compose build
+```
+
+```bash
+docker-compose up
 ```

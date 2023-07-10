@@ -1,11 +1,11 @@
 services:
-  server:
-    image: react-test-server
-    container_name: react-test-server
+  web_server:
+    image: simple_react-server
+    container_name: simple_react-server
     build:
       context: .
       dockerfile: Dockerfile
-#    ports:
-#      - 80:80
+    ports:
+      - 80:80
 
 
